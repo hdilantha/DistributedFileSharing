@@ -1,3 +1,5 @@
+package ds.core;
+
 public class Neighbour{
     private String ip;
     private int port;

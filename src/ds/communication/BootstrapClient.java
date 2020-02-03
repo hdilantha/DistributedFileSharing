@@ -1,8 +1,11 @@
+package ds.communication;
+
 import java.io.IOException;
 import java.net.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
+import ds.Constants;
 
 
 public class BootstrapClient {

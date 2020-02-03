@@ -1,3 +1,5 @@
+package ds.communication;
+
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
@@ -5,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.StringTokenizer;
+import ds.core.Neighbour;
 
 public class BootstrapServer {
 
@@ -17,6 +20,7 @@ public class BootstrapServer {
         try
         {
             sock = new DatagramSocket(55555);
+//            System.out.println(sock.getLocalAddress().getHostAddress());
 
             echo("Bootstrap Server created at 55555. Waiting for incoming data...");
 
