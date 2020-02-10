@@ -10,7 +10,7 @@ public class PropertiesFile {
 
     public static String getNodeProperty(String propertyName){
         try {
-            InputStream input = new FileInputStream("C:\\Users\\GunavaranBrihadiswar\\IdeaProjects\\DistFileSharing\\resources\\nodeConfig");
+            InputStream input = new FileInputStream("C:\\Users\\User\\IdeaProjects\\DistributedFileSharing\\resources\\nodeConfig");
             prop.load(input);
             return prop.getProperty(propertyName);
         } catch (Exception e){

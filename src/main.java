@@ -1,7 +1,7 @@
 import ds.core.Node;
 
 public class main {
-    public static void main (String args[]){
+    public static void main (String args[]) throws Exception {
 //        ds.core.Node node1 = new ds.core.Node("23", 43, "guna");
 //        int fileCount = node1.getFileCount();
 //        System.out.println(fileCount);
@@ -16,16 +16,10 @@ public class main {
         node1.registerToBSServer();
         Node node2 = new Node("1501962");
         node2.registerToBSServer();
-        Node node3 = new Node("1501963");
-        node3.registerToBSServer();
-        Node node4 = new Node("1501964");
-        node4.registerToBSServer();
-        Node node5 = new Node("1501965");
-        node5.registerToBSServer();
-        node0.echoBSServer();
-        node0.unregisterFromBSServer();
 
+        Thread.sleep(2000);                       // remove this if you are sure that all the files are created before the download
 
-
+        String testFile = node2.getFileList()[0];       // for testing - remove
+        node1.getFile(testFile, node2.getIp(), node2.getFtpServerPort());
     }
 }
